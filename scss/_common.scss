@@ -1,0 +1,63 @@
+.btn-primary {
+  background: $primary-dark;
+  border: 1px solid $primary-dark;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.section-heading-1{
+  h6{
+    font-size: 24px;
+    font-weight: 500;
+    color: $primary-light;
+    margin-bottom: 10px;
+  }
+  h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-white;
+    margin-bottom: 10px;
+  }
+  p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-white;
+    margin-bottom: 30px;
+  }
+}
+
+.section-heading-2{
+  h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-white;
+    margin-bottom: 10px;
+  }
+  p{
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: $color-white;
+    margin-bottom: 30px;
+  }
+}
+
+.service-list{
+  li{
+    padding: 10px 0;
+    .text{
+      width: 100%;
+      font-family: 'Mulish', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      padding-left: 15px;
+    }
+  }
+}
+
+// font-family: 'Mulish', sans-serif;
+// font-family: 'Ubuntu', sans-serif;

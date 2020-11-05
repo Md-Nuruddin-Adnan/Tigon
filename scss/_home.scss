@@ -1,0 +1,136 @@
+#home{
+  .header{
+    background: url(../images/banner-bg.png) no-repeat center center/cover;
+    padding: 20px 0;
+    .container-top{
+      @media(min-width: 1600px){
+        max-width: 80%;
+      }
+
+      .banner{
+        padding: 100px 0;
+        h1{
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 70px;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          padding-top: 100px;
+
+          @media(min-width: 1600px){
+            white-space: pre-line;
+          }
+        }
+        p{
+          font-family: 'Mulish', sans-serif;
+          font-size: 25px;
+          font-weight: 300;
+          margin-bottom: 40px;
+        }
+        @media(max-width: 1599px){
+          img{
+            max-width: 100%;
+          }
+        }
+        
+      }
+    }
+
+    .review{
+      background: $color-white;
+      border-radius: 5px;
+      padding: 40px 30px;
+      margin-bottom: -75px;
+      position: relative;
+      z-index: 1;
+
+      h6{
+        color: #54546a;
+        font-weight: 500;
+        font-size: 20px;
+
+        b{
+          color: #191f29;
+        }
+      }
+    }
+  }
+
+  .about{
+    background: $bg-light url(../images/triangle-bg/triangle-1.png) no-repeat center center;
+    padding: 175px 0 100px 0;
+    @media(min-width: 1600px){
+     .about-image{
+       margin-left: -200px;
+     }
+    }
+    @media(max-width: 1599px){
+     .about-image{
+       max-width: 100%;
+     }
+    }
+  }
+
+  .features{
+    background: #081931 url(../images/triangle-bg/features-bg.png) no-repeat center center;
+    padding: 100px 0;
+
+    .feature-item{
+      display: block;
+      padding: 30px;
+      background: #05152c;
+      margin-bottom: 30px;
+      transition: all 0.2s linear;
+      position: relative;
+      &::before{
+        content: '';
+        width: 0;
+        height: 10px;
+        background: $primary-light;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s linear;
+      }
+      &:hover {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.55)!important;
+        &::before{
+          width: 100%;
+        }
+      }
+      h3{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: $color-white;
+        margin: 40px 0 15px 0;
+      }
+      p{
+        font-family: 'Mulish', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        color: $color-white;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .why-us{
+    background: $bg-light url(../images/triangle-bg/why-us-bg.png) no-repeat center center;
+    padding: 100px 0;
+    @media(min-width: 1600px){
+      .section-heading-1 h2{
+        white-space: pre-line;
+      }
+     }
+     @media(max-width: 1599px){
+      .why-us-image{
+        max-width: 100%;
+      }
+     }
+  }
+}
+
+
+// font-family: 'Mulish', sans-serif;
+// font-family: 'Ubuntu', sans-serif;

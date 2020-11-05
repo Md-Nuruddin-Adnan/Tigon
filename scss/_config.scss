@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,700&family=Ubuntu:wght@400;500;700&display=swap');
+
+@font-face{
+  font-family: 'CircularStd-Medium';
+  src: url(../fonts/CircularStd-Medium.otf);
+}
+@font-face{
+  font-family: 'CircularStd-Bold';
+  src: url(../fonts/CircularStd-Bold.otf);
+}
+@font-face{
+  font-family: 'CircularStd-Book';
+  src: url(../fonts/CircularStd-Book.otf);
+}
+@font-face{
+  font-family: 'Muli';
+  src: url(../fonts/Muli-Regular.ttf);
+}
+
+$primary-dark: #0041d3;
+$primary-light: #17a1ff;
+$bg-light: #0c203c;
+$bg-dark: #081931;
+$color-white: #fff;
+$color-dark: #000;
+
+body {
+  font-family: 'CircularStd-Medium';
+  color: $color-white;
+  background-color: $bg-light;
+}
+
+h2, h3, h4{
+  font-family: 'Ubuntu', sans-serif
+}
+
+p{
+  font-family: 'Mulish', sans-serif;
+  font-weight: 300;
+  color: $color-white;
+}
+
+
+
+// font-family: 'Mulish', sans-serif;
+// font-family: 'Ubuntu', sans-serif;
