@@ -1,0 +1,77 @@
+#terms-of-service{
+  .sub-banner{
+    background: url(../images/terms_of_service/banner.png) no-repeat center center/cover;
+    .container{
+       h5{
+         &::before{
+           width: 80px;
+         }
+       }
+    }
+  }
+
+  .main-content{
+    background: url(../images/triangle-bg/terms-service-bg.png) no-repeat center/cover;
+    padding: 100px 0;
+
+    .terms-nav{
+      background: $bg-dark;
+      border-radius: 5px;
+      padding: 30px;
+
+      .heading{
+        font-family: $Ubuntu;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-white;
+        border-bottom: 1px solid #152c4d;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      li{
+        padding: 15px 0 15px 15px;
+        a{
+          font-family: $Ubuntu;
+          font-size: 18px;
+          font-weight: 500;
+          color: $color-white;
+          transition: all 0.2s linear;
+
+          &:hover{
+            color: $primary-light;
+          }
+        }
+      }
+    }
+
+    .terms-details{
+      .heading{
+        margin-bottom: 30px;
+        h4{
+          font-family: $Ubuntu;
+          font-size: 24px;
+          font-weight: 700;
+          color: $color-white;
+          text-transform: uppercase;
+          margin-bottom: 5px;
+        }
+      }
+      p{
+        font-family: $Muli-regular;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      li{
+        padding: 15px 0;
+        .title{
+          font-family: $Ubuntu;
+          font-size: 24px;
+          font-weight: 500;
+          color: $color-white;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

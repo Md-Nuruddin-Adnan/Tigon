@@ -8,28 +8,57 @@
       }
 
       .banner{
-        padding: 100px 0;
+        padding: 50px 0 100px 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        @media(min-width: 1600px){
+          padding: 100px 0;
+        }
+        .text-area{
+          display: grid;
+          place-items: center;
+        }
         h1{
           font-family: 'Ubuntu', sans-serif;
-          font-size: 70px;
+          font-size: 60px;
           font-weight: 700;
           text-transform: uppercase;
           margin-bottom: 20px;
-          padding-top: 100px;
+          // padding-top: 50px;
 
           @media(min-width: 1600px){
-            white-space: pre-line;
+            font-size: 80px;
+            // padding-top: 80px;
           }
         }
         p{
-          font-family: 'Mulish', sans-serif;
+          font-family: $Muli-light;
           font-size: 25px;
           font-weight: 300;
-          margin-bottom: 40px;
+          margin-bottom: 30px;
+          line-height: 40px;
+          letter-spacing: .5px;
         }
-        @media(max-width: 1599px){
+        a{
+          width: 200px;
+          height: 65px;
+          line-height: 65px;
+          padding: 0;
+          border-radius: 5px;
+        }
+        
+        
+    
+        @media(max-width: 1199px){
           img{
             max-width: 100%;
+            padding: 50px 0 0 0;
+          }
+        }
+        @media(min-width: 1200px){
+          img{
+            width: 100%;
           }
         }
         
@@ -57,7 +86,10 @@
   }
 
   .about{
-    background: $bg-light url(../images/triangle-bg/triangle-1.png) no-repeat center center;
+    background: $bg-light url(../images/triangle-bg/triangle-1.png) no-repeat center center/cover;
+    @media(max-width: 767px){
+      background: $bg-light;
+    }
     padding: 175px 0 100px 0;
     @media(min-width: 1600px){
      .about-image{
@@ -71,49 +103,7 @@
     }
   }
 
-  .features{
-    background: #081931 url(../images/triangle-bg/features-bg.png) no-repeat center center;
-    padding: 100px 0;
 
-    .feature-item{
-      display: block;
-      padding: 30px;
-      background: #05152c;
-      margin-bottom: 30px;
-      transition: all 0.2s linear;
-      position: relative;
-      &::before{
-        content: '';
-        width: 0;
-        height: 10px;
-        background: $primary-light;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transition: all 0.3s linear;
-      }
-      &:hover {
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.55)!important;
-        &::before{
-          width: 100%;
-        }
-      }
-      h3{
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        color: $color-white;
-        margin: 40px 0 15px 0;
-      }
-      p{
-        font-family: 'Mulish', sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        color: $color-white;
-        line-height: 28px;
-      }
-    }
-  }
 
   .why-us{
     background: $bg-light url(../images/triangle-bg/why-us-bg.png) no-repeat center center;
@@ -129,8 +119,174 @@
       }
      }
   }
+
+  .feedback{
+    padding: 80px 0;
+    background: url(../images/triangle-bg/feedback-bg.png) no-repeat center/cover;
+    .container-bottom{
+      @media(min-width: 1600px){
+        max-width: 80%;
+      }
+
+      .main-feedback{
+        position: relative;
+        .feedback-area{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          transform: translate(-50%, -50%);
+          padding: 100px;
+          @media(min-width: 1200px){
+            padding: 100px;
+          }
+          @media(max-width: 575px){
+            padding: 65px 45px;
+          }
+
+          .feedback-slide{
+            .slick-dots li{
+                display: inline-block;
+                padding: 5px;
+            }
+
+            .slick-dots{
+                position: absolute;
+                left: 50%;
+                bottom: -200px;
+                transform: translateX(-50%);
+                /* Small devices (landscape phones upto 575px) */
+                @media (max-width: 575px) {
+                  bottom: -120px;
+                }
+
+                /* Small devices (landscape phones, 576px and up) */
+                @media (min-width: 576px) and (max-width: 767px) {
+                  bottom: -140px;
+                }
+
+                /* Medium devices (tablets, 768px and up) */
+                @media (min-width: 768px) and (max-width: 991px) { 
+                  bottom: -130px;
+                }
+                @media (min-width: 992px) and (max-width: 1199px) { 
+                  bottom: -160px;
+                }
+                @media (min-width: 1200px) and (max-width: 1750px) { 
+                  bottom: -120px;
+                }
+            }
+
+            .slick-dots button{
+                font-size: 0;
+                width: 20px;
+                height: 20px;
+                background: transparent;
+                border: 2px solid transparent;
+                border-radius: 50%;
+                position: relative;
+                cursor: pointer;
+                outline: 0;
+            }
+
+            .slick-dots button:before{
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background:  rgba($primary-light, 0.5);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                outline: 0;
+            }
+
+            .slick-dots .slick-active button::before{
+              width: 6px;
+              height: 6px;
+              background:  $primary-light;
+            }
+            .slick-dots .slick-active button{
+              border: 2px solid $primary-light;
+            }
+          }
+
+          p{
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 300;
+            font-size: 23px;
+            font-style: italic;
+            letter-spacing: 1px;
+            line-height: 40px;
+
+            @media(max-width: 575px){
+              font-size: 16px;
+              line-height: 22px;
+              height: 90px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+            @media(max-width: 767px) and (min-width: 576px){
+              font-size: 18px;
+              line-height: 35px;
+            }
+          }
+          h6{
+            font-size: 22px;
+            padding: 30px 0 5px 0;
+            @media(max-width: 575px){
+              padding: 15px 0 5px 0;
+            }
+          }
+          span{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .blog{
+    padding: 100px 0;
+    background: url(../images/triangle-bg/pricing.bg.png) no-repeat center/cover;
+    .blog-item{
+      a{
+        display: block;
+        overflow: hidden;
+        img{
+          transition: all 0.3s linear;
+          &:hover{
+            filter: brightness(0.8);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.55)!important;
+            transform: scale(1.05);
+          }
+        }
+      }
+      .text{
+        .title{
+          font-family: $Ubuntu;
+          font-weight: 500;
+          font-size: 24px;
+          color: $color-white;
+          margin: 25px 0 10px 0;
+        }
+        p{
+          font-family: $Muli-regular;
+          font-size: 18px;
+          color: $color-white;
+        }
+      }
+    }
+  }
 }
 
 
-// font-family: 'Mulish', sans-serif;
-// font-family: 'Ubuntu', sans-serif;
+// $CircularStd-Medium: 'CircularStd-Medium';
+// $CircularStd-Bold: 'CircularStd-Bold';
+// $CircularStd-Book: 'CircularStd-Book';
+// $Muli: 'Muli';
+// $Muli-light: 'Muli-light';
+// $Muli-regular: 'Muli-regular';
+// $Mulish: 'Mulish', sans-serif;
+// $Ubuntu: 'Ubuntu', sans-serif;

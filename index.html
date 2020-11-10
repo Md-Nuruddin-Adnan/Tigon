@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>your title</title>
-  <link rel='shortcut icon' href='images/logo.png' type='image/x-icon'>
+  <title>Tigon | Home</title>
+  <link rel='shortcut icon' href='images/fav-icon.png' type='image/x-icon'>
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/slick.css">
@@ -17,8 +17,8 @@
   <!-- === header section start === -->
   <header class="header">
     <div class="container container-top">
-      <nav class="navbar navbar-expand-xl navbar-dark px-xl-0">
-        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
+      <nav id="navbar" class="navbar navbar-expand-xl navbar-dark px-xl-0">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,18 +43,20 @@
       </nav>
       <div class="banner">
         <div class="row">
-          <div class="col-xl-7 order-xl-1 order-2">
-            <h1>Tigon Hosting For
-              Best Gaming</h1>
-            <p class="pr-xl-5">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised.
-            </p>
-            <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+          <div class="col-xl-7 order-xl-1 order-2 text-area">
+            <div>
+              <h1>Tigon Hosting For
+                Best Gaming</h1>
+              <p class="pr-xl-5">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised.
+              </p>
+              <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
           </div>
-          <div class="col-xl-5 order-xl-2 order-1">
-            <img src="images/banner.png" alt="" class="">
+          <div class="col-xl-5 order-xl-2 order-1 text-center">
+            <img src="images/banner.png" alt="">
           </div>
         </div>
       </div>
@@ -124,7 +126,7 @@
       </div>
       <div class="row feature-area">
         <div class="col-lg-4">
-          <a href="#" class="feature-item shadow">
+          <a  class="feature-item shadow">
             <img src="images/icon/storage.png" alt="" class="img-fluid">
             <h3>Unlimited Storage</h3>
             <p>
@@ -137,7 +139,7 @@
           </a>
         </div>
         <div class="col-lg-4">
-          <a href="#" class="feature-item shadow">
+          <a class="feature-item shadow">
             <img src="images/icon/security.png" alt="" class="img-fluid">
             <h3>Security First</h3>
             <p>
@@ -150,7 +152,7 @@
           </a>
         </div>
         <div class="col-lg-4">
-          <a href="#" class="feature-item shadow">
+          <a class="feature-item shadow">
             <img src="images/icon/timelocation.png" alt="" class="img-fluid">
             <h3>Global Time and Location</h3>
             <p>
@@ -163,7 +165,7 @@
           </a>
         </div>
         <div class="col-lg-4">
-          <a href="#" class="feature-item shadow">
+          <a class="feature-item shadow">
             <img src="images/icon/power.png" alt="" class="img-fluid">
             <h3>Powerful Resources</h3>
             <p>
@@ -176,7 +178,7 @@
           </a>
         </div>
         <div class="col-lg-4">
-          <a href="#" class="feature-item shadow">
+          <a class="feature-item shadow">
             <img src="images/icon/livesupport.png" alt="" class="img-fluid">
             <h3>24/7 Live Support</h3>
             <p>
@@ -189,7 +191,7 @@
           </a>
         </div>
         <div class="col-lg-4">
-          <a href="#" class="feature-item shadow">
+          <a class="feature-item shadow">
             <img src="images/icon/cloudserver.png" alt="" class="img-fluid">
             <h3>Cloud Server</h3>
             <p>
@@ -212,7 +214,7 @@
   <section class="why-us">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-lg-1 order-2">
           <div class="section-heading-1">
             <h6>Why Use Us?</h6>
             <h2>Very Fast Service
@@ -239,7 +241,7 @@
           </ul>
           <a href="#" class="btn btn-lg btn-primary my-4">Get Started Now</a>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-lg-2 order-1 mb-lg-0 mb-4">
           <img src="images/why-us.png" alt="why-us" class="why-us-image">
         </div>
       </div>
@@ -247,17 +249,252 @@
   </section>
   <!-- ===//end of why-us section === -->
 
+  <!-- ===// best-pricing section start === -->
+  <section class="best-pricing">
+    <div class="container">
+      <div class="section-heading-2 text-center mb-4">
+        <div class="row">
+          <div class="col-xl-8 m-auto">
+            <h2>Best pricing for best gaming</h2>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority
+              have suffered alteration in some form, by injected randomised words.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="pricing-item position-relative">
+            <img src="images/pricing/pricing-1.png" alt="pricing-image" class="w-100">
+            <div class="text">
+              <h4 class="title">Best Gaming Server With Security</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price"><sup>$</sup>33.00</div>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="pricing-item position-relative">
+            <img src="images/pricing/pricing-2.png" alt="pricing-image" class="w-100">
+            <div class="text">
+               <h4 class="title">Exclusive Server And High Speed</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price"><sup>$</sup>33.00</div>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="pricing-item position-relative">
+            <img src="images/pricing/pricing-3.png" alt="pricing-image" class="w-100">
+            <div class="text">
+              <h4 class="title">Security Must And Protection</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price"><sup>$</sup>44.00</div>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===//end of best-pricing section === -->
+
+  <!-- ===// feedback section start === -->
+  <section class="feedback">
+    <div class="container">
+      <div class="section-heading-2 text-center mb-4">
+        <div class="row">
+          <div class="col-xl-8 m-auto">
+            <h2>User Feedback</h2>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority
+              have suffered alteration in some form, by injected randomised words.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-bottom">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-xl-3 d-xl-block d-none text-right">
+          <div class="user-img"><img src="images/feedback/user-group-1.png" alt="" class="img-fluid"></div>
+        </div>
+        <div class="col-xl-6 col-lg-8 col-md-10 m-auto px-md-3 px-0">
+          <div class="main-feedback">
+            <img src="images/feedback/main-feedback-bg.png" alt="" class="w-100">
+            <div class="feedback-area">
+              <div class="feedback-slide">
+                <div class="feedback-item text-center">
+                  <p> There are many variations of passages of Lorem
+                    Ipsum available, but the majority have suffered
+                    alteration in some form, by injected
+                    randomised words.</p>
+                  <h6>Robison Croso</h6>
+                  <span>User</span>
+                </div>
+                <div class="feedback-item text-center">
+                  <p>There are many variations of passages of Lorem
+                    Ipsum available, but the majority have suffered
+                    alteration in some form, by injected
+                    randomised words.</p>
+                  <h6>Robison Croso</h6>
+                  <span>User</span>
+                </div>
+                <div class="feedback-item text-center">
+                  <p>There are many variations of passages of Lorem
+                    Ipsum available, but the majority have suffered
+                    alteration in some form, by injected
+                    randomised words.</p>
+                  <h6>Robison Croso</h6>
+                  <span>User</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3  d-xl-block d-none">
+          <div class="user-img"><img src="images/feedback/user-group-2.png" alt="" class="img-fluid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===//end of feedback section === -->
+
+  <!-- ===// blog section start === -->
+  <section class="blog">
+    <div class="container">
+      <div class="section-heading-2 text-center mb-4">
+        <div class="row">
+          <div class="col-xl-8 m-auto">
+            <h2>Recent Blogs</h2>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority
+              have suffered alteration in some form, by injected randomised words.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="blog-item">
+            <a>
+              <img src="images/blog/blog-1.png" alt="blog-image" class="w-100 shadow">
+            </a>
+            <div class="text">
+              <h4 class="title">Enjoy Gaming Anytime</h4>
+              <p> There are many variations of passages of Lorem Ipsum available. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="blog-item">
+            <a>
+              <img src="images/blog/blog-2.png" alt="blog-image" class="w-100 shadow">
+            </a>
+            <div class="text">
+              <h4 class="title">It’s Always Peace</h4>
+              <p> There are many variations of passages of Lorem Ipsum available. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="blog-item">
+            <a>
+              <img src="images/blog/blog-3.png" alt="blog-image" class="w-100 shadow">
+            </a>
+            <div class="text">
+              <h4 class="title">Secure and strong</h4>
+              <p> There are many variations of passages of Lorem Ipsum available. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===//end of blog section === -->
+ 
+
   <!-- ===// ? section start === -->
 
   <!-- ===//end of ? section === -->
  
   
   <!-- === footer section start === -->
-  <footer>
-
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+            <a href="index.html" class="footer-logo">
+              <img src="images/logo.png" alt="logo" class="img-fluid">
+            </a>
+            <p>Subscribe Us</p>
+            <form>
+              <div class="form-group position-relative">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter Email Address" required>
+                <button class="btn"><i class="far fa-long-arrow-right"></i></button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-lg-0 mb-4 pl-md-5">
+            <h6>COMPANY</h6>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#"> Privacy Policy</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Earn Money</a></li>
+              <li><a href="#">Jobs</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+            <h6>Server Hosting</h6>
+            <ul>
+              <li><a href="#">Hytale Server Hosting</a></li>
+              <li><a href="#">ARK Server Hosting</a></li>
+              <li><a href="#">Garry’s Mod Servers</a></li>
+              <li><a href="#">Conan Exiles Servers</a></li>
+              <li><a href="#">Rust Server Hosting</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+            <h6>SUPPORT</h6>
+            <ul>
+              <li><a href="#">Submit a Ticket</a></li>
+              <li><a href="#">Knowledgebase</a></li>
+              <li><a href="#">Server Status</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container d-md-flex align-items-center justify-content-between text-center">
+        <p class="mb-md-0 mb-3">Copyright © 2020 | All Rights Reserved</p>
+        <div class="social-link">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
   <!-- ===//end of footer section === -->
+  
+  
+  
+  
+  
+  
+
+
+
  
+  
+  
+  
 
  
 

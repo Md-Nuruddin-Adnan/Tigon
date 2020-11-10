@@ -1,0 +1,93 @@
+.footer{
+  background: #041226;
+  .footer-top{
+    padding: 60px 0;
+    .footer-logo{
+      img{
+        display: block;
+      }
+    }
+    p{
+      font-family: $Ubuntu;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 25px 0 5px 0;
+    }
+    .form-group{
+      .form-control{
+        background:transparent;
+        border: 1px solid $primary-light;
+        font-size: 14px;
+        color: $color-white;
+      }
+      .btn{
+        color: $primary-light;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        transition: all 0.2s linear;
+
+        &:hover{
+          right: -5px;
+        }
+      }
+      .btn.focus, .btn:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    h6{
+      font-family: $Ubuntu;
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: $primary-light;
+      text-transform: uppercase;
+    }
+    ul{
+      li{
+        padding-bottom: 5px;
+        a{
+          font-family: $Muli-regular;
+          font-size: 16px;
+          color: rgba($color-white, 0.8);
+          transition: all 0.2s linear;
+
+          &:hover{
+            color: rgba($primary-light, 1);
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom{
+    background: #030e1d;
+    padding: 20px 0;
+    p{
+      font-family: $Muli-regular;
+      font-size: 14px;
+      color: $color-white;
+    }
+    .social-link{
+      a{
+        text-align: center;
+        i{
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          border-radius: 50%;
+          background: #374962;
+          font-size: 16px;
+          color: #030e1d; 
+          margin: 0 5px;
+          transition: all 0.2s linear;
+
+          &:hover{
+            background: $primary-light;
+          }
+        }
+      }
+    }
+  }
+}

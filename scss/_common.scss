@@ -1,7 +1,7 @@
 .btn-primary {
   background: $primary-dark;
   border: 1px solid $primary-dark;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $Ubuntu;
   font-weight: 500;
   font-size: 20px;
 }
@@ -14,14 +14,14 @@
     margin-bottom: 10px;
   }
   h2{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $Ubuntu;
     font-size: 36px;
     font-weight: 700;
     color: $color-white;
     margin-bottom: 10px;
   }
   p{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $Ubuntu;
     font-size: 18px;
     font-weight: 500;
     color: $color-white;
@@ -31,16 +31,17 @@
 
 .section-heading-2{
   h2{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $Ubuntu;
     font-size: 36px;
     font-weight: 700;
     color: $color-white;
     margin-bottom: 10px;
+    text-transform: uppercase;
   }
   p{
-    font-family: 'Mulish', sans-serif;
+    font-family: $Muli-regular;
     font-size: 18px;
-    font-weight: 300;
+    // font-weight: 400;
     color: $color-white;
     margin-bottom: 30px;
   }
@@ -59,5 +60,132 @@
   }
 }
 
+.features{
+  background: #081931 url(../images/triangle-bg/features-bg.png) no-repeat center center/cover;
+  padding: 100px 0;
+
+  .feature-item{
+    display: block;
+    padding: 30px;
+    background: #05152c;
+    margin-bottom: 30px;
+    transition: all 0.2s linear;
+    position: relative;
+    &::before{
+      content: '';
+      width: 0;
+      height: 10px;
+      background: $primary-light;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.3s linear;
+    }
+    &:hover {
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.55)!important;
+      &::before{
+        width: 100%;
+      }
+    }
+    h3{
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: $color-white;
+      margin: 40px 0 15px 0;
+    }
+    p{
+      font-family: $Muli-light;
+      font-size: 16px;
+      font-weight: 300;
+      color: $color-white;
+      line-height: 28px;
+    }
+  }
+}
+
+.best-pricing{
+  padding: 100px 0;
+  background: $bg-dark url(../images/triangle-bg/pricing.bg.png) no-repeat center;
+
+  .pricing-item{
+    border-bottom: 5px solid $primary-light;
+    .text{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      .title{
+        font-family: $CircularStd-Medium;
+        font-size: 30px;
+        color: $color-white;
+        padding: 30px;
+      }
+      .price{
+        font-family: $CircularStd-Medium;
+        font-size: 30px;
+        color: $color-white;
+        sup{
+          padding-left: 30px;
+        }
+      }
+      a{
+        font-family: $CircularStd-Medium;
+        font-size: 20px;
+        background: $primary-light;
+        border: 0;
+        border-radius: 0;
+        padding: 12px 30px;
+        border-top-left-radius: 30px;
+
+        &:hover{
+          background: darken($primary-light, 10)
+        }
+      }
+    }
+  }
+}
+
+.sub-banner{
+  max-height: 400px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+
+  @media(max-width: 1199px){
+    margin-top: 80px;
+  }
+
+ .container{
+   padding: 180px 15px;
+   @media(max-width: 575px){
+    padding: 60px 15px;
+   }
+    h5{
+      font-size: 30px;
+      color: $color-white;
+      position: relative;
+
+      &::before{
+        content: '';
+        width: 38px;
+        height: 2px;
+        background: $color-white;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+      }
+    }
+ }
+}
+
 // font-family: 'Mulish', sans-serif;
 // font-family: 'Ubuntu', sans-serif;
+// $CircularStd-Medium: 'CircularStd-Medium';
+// $CircularStd-Bold: 'CircularStd-Bold';
+// $CircularStd-Book: 'CircularStd-Book';
+// $Muli: 'Muli';
+// $Muli-light: 'Muli-light';
+// $Muli-regular: 'Muli-regular';
+// $Mulish: 'Mulish', sans-serif;
+// $Ubuntu: 'Ubuntu', sans-serif;

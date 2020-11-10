@@ -1,5 +1,5 @@
 /*=== global css start === */
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;1,300&family=Ubuntu:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +43,22 @@ a, a:hover {
 
 @font-face {
   font-family: 'Muli';
+  src: url(../fonts/Muli.ttf);
+}
+
+@font-face {
+  font-family: 'Muli-light';
+  src: url(../fonts/Muli-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Muli-regular';
   src: url(../fonts/Muli-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Muli-light-italic';
+  src: url(../fonts/Muli-ExtraLightItalic.ttf);
 }
 
 body {
@@ -53,13 +68,18 @@ body {
 }
 
 h2, h3, h4 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 p {
-  font-family: 'Mulish', sans-serif;
-  font-weight: 300;
+  font-family: "Muli";
   color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
 }
 
 /*===// end of config css === */
@@ -69,7 +89,7 @@ p {
 .btn-primary {
   background: #0041d3;
   border: 1px solid #0041d3;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 20px;
 }
@@ -82,7 +102,7 @@ p {
 }
 
 .section-heading-1 h2 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #fff;
@@ -90,7 +110,7 @@ p {
 }
 
 .section-heading-1 p {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #fff;
@@ -98,17 +118,17 @@ p {
 }
 
 .section-heading-2 h2 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .section-heading-2 p {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Muli-regular";
   font-size: 18px;
-  font-weight: 300;
   color: #fff;
   margin-bottom: 30px;
 }
@@ -125,6 +145,140 @@ p {
   padding-left: 15px;
 }
 
+.features {
+  background: #081931 url(../images/triangle-bg/features-bg.png) no-repeat center center/cover;
+  padding: 100px 0;
+}
+
+.features .feature-item {
+  display: block;
+  padding: 30px;
+  background: #05152c;
+  margin-bottom: 30px;
+  transition: all 0.2s linear;
+  position: relative;
+}
+
+.features .feature-item::before {
+  content: '';
+  width: 0;
+  height: 10px;
+  background: #17a1ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s linear;
+}
+
+.features .feature-item:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.55) !important;
+}
+
+.features .feature-item:hover::before {
+  width: 100%;
+}
+
+.features .feature-item h3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  margin: 40px 0 15px 0;
+}
+
+.features .feature-item p {
+  font-family: "Muli-light";
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 28px;
+}
+
+.best-pricing {
+  padding: 100px 0;
+  background: #081931 url(../images/triangle-bg/pricing.bg.png) no-repeat center;
+}
+
+.best-pricing .pricing-item {
+  border-bottom: 5px solid #17a1ff;
+}
+
+.best-pricing .pricing-item .text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.best-pricing .pricing-item .text .title {
+  font-family: "CircularStd-Medium";
+  font-size: 30px;
+  color: #fff;
+  padding: 30px;
+}
+
+.best-pricing .pricing-item .text .price {
+  font-family: "CircularStd-Medium";
+  font-size: 30px;
+  color: #fff;
+}
+
+.best-pricing .pricing-item .text .price sup {
+  padding-left: 30px;
+}
+
+.best-pricing .pricing-item .text a {
+  font-family: "CircularStd-Medium";
+  font-size: 20px;
+  background: #17a1ff;
+  border: 0;
+  border-radius: 0;
+  padding: 12px 30px;
+  border-top-left-radius: 30px;
+}
+
+.best-pricing .pricing-item .text a:hover {
+  background: #0087e3;
+}
+
+.sub-banner {
+  max-height: 400px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 1199px) {
+  .sub-banner {
+    margin-top: 80px;
+  }
+}
+
+.sub-banner .container {
+  padding: 180px 15px;
+}
+
+@media (max-width: 575px) {
+  .sub-banner .container {
+    padding: 60px 15px;
+  }
+}
+
+.sub-banner .container h5 {
+  font-size: 30px;
+  color: #fff;
+  position: relative;
+}
+
+.sub-banner .container h5::before {
+  content: '';
+  width: 38px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
 /*===// end of common section === */
 /*=== navbar section start === */
 .navbar-dark .navbar-nav .nav-link {
@@ -137,10 +291,39 @@ p {
   color: #17a1ff;
 }
 
+.navbar .btn-primary {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-family: "CircularStd-Medium";
+  font-size: 16px;
+}
+
 @media (min-width: 1200px) {
   .navbar-expand-xl .navbar-nav .nav-link {
     padding-right: .8rem;
     padding-left: .8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: #0c203c;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.2s linear;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container-top {
+    max-width: 80% !important;
   }
 }
 
@@ -158,34 +341,64 @@ p {
 }
 
 #home .header .container-top .banner {
-  padding: 100px 0;
+  padding: 50px 0 100px 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 1600px) {
+  #home .header .container-top .banner {
+    padding: 100px 0;
+  }
+}
+
+#home .header .container-top .banner .text-area {
+  display: grid;
+  place-items: center;
 }
 
 #home .header .container-top .banner h1 {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
-  padding-top: 100px;
 }
 
 @media (min-width: 1600px) {
   #home .header .container-top .banner h1 {
-    white-space: pre-line;
+    font-size: 80px;
   }
 }
 
 #home .header .container-top .banner p {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Muli-light";
   font-size: 25px;
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  line-height: 40px;
+  letter-spacing: .5px;
 }
 
-@media (max-width: 1599px) {
+#home .header .container-top .banner a {
+  width: 200px;
+  height: 65px;
+  line-height: 65px;
+  padding: 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 1199px) {
   #home .header .container-top .banner img {
     max-width: 100%;
+    padding: 50px 0 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #home .header .container-top .banner img {
+    width: 100%;
   }
 }
 
@@ -209,8 +422,14 @@ p {
 }
 
 #home .about {
-  background: #0c203c url(../images/triangle-bg/triangle-1.png) no-repeat center center;
+  background: #0c203c url(../images/triangle-bg/triangle-1.png) no-repeat center center/cover;
   padding: 175px 0 100px 0;
+}
+
+@media (max-width: 767px) {
+  #home .about {
+    background: #0c203c;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -223,55 +442,6 @@ p {
   #home .about .about-image {
     max-width: 100%;
   }
-}
-
-#home .features {
-  background: #081931 url(../images/triangle-bg/features-bg.png) no-repeat center center;
-  padding: 100px 0;
-}
-
-#home .features .feature-item {
-  display: block;
-  padding: 30px;
-  background: #05152c;
-  margin-bottom: 30px;
-  transition: all 0.2s linear;
-  position: relative;
-}
-
-#home .features .feature-item::before {
-  content: '';
-  width: 0;
-  height: 10px;
-  background: #17a1ff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: all 0.3s linear;
-}
-
-#home .features .feature-item:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.55) !important;
-}
-
-#home .features .feature-item:hover::before {
-  width: 100%;
-}
-
-#home .features .feature-item h3 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  color: #fff;
-  margin: 40px 0 15px 0;
-}
-
-#home .features .feature-item p {
-  font-family: 'Mulish', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  color: #fff;
-  line-height: 28px;
 }
 
 #home .why-us {
@@ -291,8 +461,976 @@ p {
   }
 }
 
+#home .feedback {
+  padding: 80px 0;
+  background: url(../images/triangle-bg/feedback-bg.png) no-repeat center/cover;
+}
+
+@media (min-width: 1600px) {
+  #home .feedback .container-bottom {
+    max-width: 80%;
+  }
+}
+
+#home .feedback .container-bottom .main-feedback {
+  position: relative;
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+}
+
+@media (min-width: 1200px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 575px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area {
+    padding: 65px 45px;
+  }
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots li {
+  display: inline-block;
+  padding: 5px;
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: -200px;
+  transform: translateX(-50%);
+  /* Small devices (landscape phones upto 575px) */
+  /* Small devices (landscape phones, 576px and up) */
+  /* Medium devices (tablets, 768px and up) */
+}
+
+@media (max-width: 575px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots {
+    bottom: -120px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots {
+    bottom: -140px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots {
+    bottom: -130px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots {
+    bottom: -160px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1750px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots {
+    bottom: -120px;
+  }
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots button {
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: 0;
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots button:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(23, 161, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: 0;
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots .slick-active button::before {
+  width: 6px;
+  height: 6px;
+  background: #17a1ff;
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area .feedback-slide .slick-dots .slick-active button {
+  border: 2px solid #17a1ff;
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 40px;
+}
+
+@media (max-width: 575px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area p {
+    font-size: 16px;
+    line-height: 22px;
+    height: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area p {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area h6 {
+  font-size: 22px;
+  padding: 30px 0 5px 0;
+}
+
+@media (max-width: 575px) {
+  #home .feedback .container-bottom .main-feedback .feedback-area h6 {
+    padding: 15px 0 5px 0;
+  }
+}
+
+#home .feedback .container-bottom .main-feedback .feedback-area span {
+  font-size: 16px;
+}
+
+#home .blog {
+  padding: 100px 0;
+  background: url(../images/triangle-bg/pricing.bg.png) no-repeat center/cover;
+}
+
+#home .blog .blog-item a {
+  display: block;
+  overflow: hidden;
+}
+
+#home .blog .blog-item a img {
+  transition: all 0.3s linear;
+}
+
+#home .blog .blog-item a img:hover {
+  filter: brightness(0.8);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.55) !important;
+  transform: scale(1.05);
+}
+
+#home .blog .blog-item .text .title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  margin: 25px 0 10px 0;
+}
+
+#home .blog .blog-item .text p {
+  font-family: "Muli-regular";
+  font-size: 18px;
+  color: #fff;
+}
+
 /*===// end of home section === */
+/*=== game_details section start === */
+#game-details .sub-banner {
+  background: url(../images/game_details/banner.png) no-repeat center center/cover;
+  max-height: 660px;
+}
+
+#game-details .sub-banner .container {
+  padding: 150px 15px 450px 15px;
+}
+
+@media (max-width: 575px) {
+  #game-details .sub-banner .container {
+    padding: 60px 15px 240px 15px;
+  }
+}
+
+#game-details .sub-banner .container h5::before {
+  width: 80px;
+}
+
+#game-details .features {
+  background: #081931 url(../images/gaming_hosting/include-bg.png) no-repeat center center/cover;
+  padding: 100px 0;
+}
+
+@media (min-width: 1200px) {
+  #game-details .features .section-heading-2 h2 {
+    white-space: pre-line;
+  }
+}
+
+@media (min-width: 1200px) {
+  #game-details .main-content .bg-triangle {
+    position: absolute;
+    bottom: -200px;
+    left: -200px;
+  }
+}
+
+#game-details .main-content .about-game {
+  background: #081931;
+  border-radius: 15px;
+  margin-top: -200px;
+}
+
+#game-details .main-content .about-game .img-section h3.title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 20px;
+}
+
+#game-details .main-content .about-game .text-section .heading {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#game-details .main-content .about-game .text-section p {
+  font-family: "Muli-regular";
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+#game-details .main-content .about-game .text-section .share-section .share-heading {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#game-details .main-content .about-game .text-section .share-section .social-link {
+  margin-left: -10px;
+}
+
+#game-details .main-content .about-game .text-section .share-section .social-link a {
+  text-align: center;
+}
+
+#game-details .main-content .about-game .text-section .share-section .social-link a i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background: #374962;
+  font-size: 16px;
+  color: #030e1d;
+  margin: 0 5px;
+  transition: all 0.2s linear;
+}
+
+#game-details .main-content .about-game .text-section .share-section .social-link a i:hover {
+  background: #17a1ff;
+}
+
+#game-details .main-content .about-game-slot {
+  padding-bottom: 100px;
+}
+
+#game-details .main-content .about-game-slot .slot-details .slot-heading {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#game-details .main-content .about-game-slot .slot-details p {
+  font-family: "Muli-regular";
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+#game-details .main-content .about-game-slot .buying-section {
+  padding: 30px 30px 0 30px;
+  background: url(../images/game_details/game-slot-bg.png) no-repeat top center/cover;
+  border-bottom: 4px solid #17a1ff;
+}
+
+#game-details .main-content .about-game-slot .buying-section .pricing {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+  display: block;
+  margin: 5px 0 5px 0;
+}
+
+#game-details .main-content .about-game-slot .buying-section .pricing .prev {
+  font-size: 60%;
+}
+
+#game-details .main-content .about-game-slot .buying-section .pricing .next {
+  font-size: 40%;
+  text-transform: none;
+  top: 0;
+  left: 5px;
+}
+
+#game-details .main-content .about-game-slot .buying-section .slot-result {
+  font-family: "CircularStd-Medium";
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#game-details .main-content .about-game-slot .buying-section .text-left {
+  font-family: "CircularStd-Book";
+  font-size: 18px;
+  color: #fff;
+}
+
+#game-details .main-content .about-game-slot .buying-section .range-meter {
+  margin-top: 5px;
+}
+
+#game-details .main-content .about-game-slot .buying-section .range-meter span {
+  font-family: "CircularStd-Book";
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+#game-details .main-content .about-game-slot .buying-section .btn-primary {
+  font-family: "CircularStd-Medium";
+  font-size: 20px;
+  background: #17a1ff;
+  border: 0;
+  border-radius: 0;
+  padding: 12px 30px;
+  border-top-left-radius: 30px;
+  margin-right: -30px;
+}
+
+/*===// end of game_details section === */
+/*=== gaming_hosting section start === */
+#gaming-hosting .sub-banner {
+  background: url(../images/gaming_hosting/banner.png) no-repeat center center/cover;
+}
+
+#gaming-hosting .sub-banner .container h5::before {
+  width: 80px;
+}
+
+#gaming-hosting .best-pricing {
+  padding: 100px 0;
+  background: #081931 url(../images/gaming_hosting/pricing-bg.png) no-repeat center/cover;
+}
+
+#gaming-hosting .features {
+  background: #081931 url(../images/gaming_hosting/include-bg.png) no-repeat center center/cover;
+  padding: 100px 0;
+}
+
+@media (min-width: 1200px) {
+  #gaming-hosting .features .section-heading-2 h2 {
+    white-space: pre-line;
+  }
+}
+
+#gaming-hosting .game-server {
+  background: #0c203c url(../images/gaming_hosting/game-server-bg.png) no-repeat center/cover;
+  padding: 100px 0;
+}
+
+#gaming-hosting .game-server .nav-pills .nav-link {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  padding: .5rem 1.5rem;
+}
+
+#gaming-hosting .game-server .nav-pills .nav-link.active, #gaming-hosting .game-server .nav-pills .show > .nav-link {
+  background: transparent;
+  color: #17a1ff;
+}
+
+#gaming-hosting .game-server .nav-pills .nav-link.active span, #gaming-hosting .game-server .nav-pills .show > .nav-link span {
+  color: #fff;
+}
+
+#gaming-hosting .game-server .nav-pills .nav-link.active::before, #gaming-hosting .game-server .nav-pills .show > .nav-link::before {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#gaming-hosting .game-server .nav-pills i {
+  color: #294c7e;
+}
+
+#gaming-hosting .game-server .nav-pills .form-control::placeholder {
+  color: #294c7e;
+}
+
+#gaming-hosting .game-server .nav-pills .form-control {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Muli-regular";
+  background: transparent;
+  border: none;
+  width: 220px;
+  padding-left: 5px;
+}
+
+#gaming-hosting .game-server .server-list {
+  border: 10px solid #14325c;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+#gaming-hosting .game-server .server-list .text {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+}
+
+#gaming-hosting .game-server .server-list .text .pricing,
+#gaming-hosting .game-server .server-list .text .game-name {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 575px) {
+  #gaming-hosting .game-server .server-list .text .pricing,
+  #gaming-hosting .game-server .server-list .text .game-name {
+    font-size: 16px;
+  }
+}
+
+#gaming-hosting .game-server .server-list .text .pricing {
+  font-size: 28px;
+  display: block;
+  margin: 5px 0 20px 0;
+}
+
+@media (max-width: 575px) {
+  #gaming-hosting .game-server .server-list .text .pricing {
+    margin: 0px 0 5px 0;
+  }
+}
+
+#gaming-hosting .game-server .server-list .text .pricing .prev {
+  font-size: 60%;
+}
+
+#gaming-hosting .game-server .server-list .text .pricing .next {
+  font-size: 40%;
+  text-transform: none;
+  top: 0;
+  left: 5px;
+}
+
+#gaming-hosting .game-server .server-list .text .btn-primary {
+  font-family: "CircularStd-Medium";
+  background: #14325c;
+  border: none;
+  border-radius: 0;
+  border-top-left-radius: 50px;
+  margin-right: -15px;
+  padding: 20px 30px;
+  transition: all 0.2s linear;
+}
+
+@media (max-width: 575px) {
+  #gaming-hosting .game-server .server-list .text .btn-primary {
+    padding: 5px 20px;
+    font-size: 16px;
+  }
+}
+
+#gaming-hosting .game-server .server-list:hover {
+  border: 10px solid #17a1ff;
+}
+
+#gaming-hosting .game-server .server-list:hover .btn-primary {
+  background: #17a1ff;
+}
+
+#gaming-hosting .game-server .more-btn {
+  font-family: "CircularStd-Medium";
+  font-size: 20px;
+  color: #fff;
+  height: 65px;
+  width: 200px;
+  line-height: 65px;
+  padding: 0;
+  margin-top: 30px;
+}
+
+/*===// end of gaming_hosting section === */
+/*=== support section start === */
+#support .sub-banner {
+  background: url(../images/support/banner.png) no-repeat center center/cover;
+}
+
+#support .main-support {
+  background: url(../images/triangle-bg/support-bg.png) no-repeat center center/cover;
+  padding: 80px 0 100px 0;
+}
+
+#support .main-support .heading {
+  margin-bottom: 40px;
+}
+
+#support .main-support .heading h3, #support .main-support .heading h6 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+
+#support .main-support .heading h3 {
+  font-size: 36px;
+}
+
+#support .main-support .search {
+  margin-bottom: 60px;
+}
+
+#support .main-support .search .form-control {
+  background: #081931;
+  border: 1px solid #112b4e;
+  font-size: 20px;
+  font-family: "Muli-light";
+  color: #fff;
+  height: 75px;
+}
+
+#support .main-support .search .btn-primary {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  font-size: 25px;
+}
+
+#support .main-support .support-item {
+  background: #081931;
+  padding: 60px 30px;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  #support .main-support .support-item {
+    border-right: 1px solid #1a3b6a;
+  }
+}
+
+#support .main-support .support-item::before {
+  content: '';
+  width: 0;
+  height: 4px;
+  background: #17a1ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s linear;
+}
+
+#support .main-support .support-item:hover::before {
+  width: 100%;
+}
+
+#support .main-support .support-item h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+  margin: 30px 0 10px 0;
+}
+
+#support .main-support .support-item p {
+  font-family: "Muli-light";
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#support .main-support .support-item a {
+  width: 180px;
+  height: 55px;
+  line-height: 55px;
+  padding: 0;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/*===// end of support section === */
+/*=== terms_of_service section start === */
+#terms-of-service .sub-banner {
+  background: url(../images/terms_of_service/banner.png) no-repeat center center/cover;
+}
+
+#terms-of-service .sub-banner .container h5::before {
+  width: 80px;
+}
+
+#terms-of-service .main-content {
+  background: url(../images/triangle-bg/terms-service-bg.png) no-repeat center/cover;
+  padding: 100px 0;
+}
+
+#terms-of-service .main-content .terms-nav {
+  background: #081931;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+#terms-of-service .main-content .terms-nav .heading {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid #152c4d;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#terms-of-service .main-content .terms-nav li {
+  padding: 15px 0 15px 15px;
+}
+
+#terms-of-service .main-content .terms-nav li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.2s linear;
+}
+
+#terms-of-service .main-content .terms-nav li a:hover {
+  color: #17a1ff;
+}
+
+#terms-of-service .main-content .terms-details .heading {
+  margin-bottom: 30px;
+}
+
+#terms-of-service .main-content .terms-details .heading h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+#terms-of-service .main-content .terms-details p {
+  font-family: "Muli-regular";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#terms-of-service .main-content .terms-details li {
+  padding: 15px 0;
+}
+
+#terms-of-service .main-content .terms-details li .title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/*===// end of terms_of_service section === */
+/*=== web_hosting section start === */
+#web-hosting .sub-banner {
+  background: url(../images/web_hosting/banner.png) no-repeat top center/cover;
+}
+
+#web-hosting .sub-banner .container h5::before {
+  width: 80px;
+}
+
+#web-hosting .features {
+  background: url(../images/triangle-bg/web-hosting.png) no-repeat center center/cover;
+  padding: 100px 0;
+}
+
+@media (min-width: 1200px) {
+  #web-hosting .features .section-heading-2 h2 {
+    white-space: pre-line;
+  }
+}
+
+#web-hosting .pricing-plan {
+  background: url(../images/triangle-bg/price-plan.png) no-repeat center center/cover;
+  padding: 100px 0;
+}
+
+#web-hosting .pricing-plan .nav-pills {
+  border-radius: 50px;
+  border: 1px solid #17a1ff;
+  background: #fff;
+  display: inline-flex;
+}
+
+#web-hosting .pricing-plan .nav-pills .nav-link {
+  font-family: "CircularStd-Book";
+  font-size: 18px;
+  color: #17a1ff;
+  border-radius: 50px;
+  width: 140px;
+  height: 55px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+#web-hosting .pricing-plan .nav-pills .nav-link.active, #web-hosting .pricing-plan .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #17a1ff;
+}
+
+#web-hosting .pricing-plan .price-plan-item {
+  background: #0c203c;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#web-hosting .pricing-plan .price-plan-item.recommended::before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-top: 80px solid #17a1ff;
+  border-right: 80px solid transparent;
+  z-index: 1;
+}
+
+#web-hosting .pricing-plan .price-plan-item.recommended::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  bottom: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-bottom: 80px solid #17a1ff;
+  border-left: 80px solid transparent;
+  z-index: 1;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-header h3.title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-header p {
+  font-family: "Muli-regular";
+  font-size: 18px;
+  color: #fff;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-body {
+  border-bottom: 1px solid #1a3353;
+  padding: 25px 0;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-body li {
+  padding: 8px;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-body li i {
+  color: #17a1ff;
+  font-size: 16px;
+  padding: 5px 8px;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-body li span {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-footer .pricing-amount {
+  font-family: "CircularStd-Bold";
+  font-size: 50px;
+  color: #fff;
+  padding: 30px 0 0 0;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-footer span {
+  font-family: "CircularStd-Book";
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  padding-bottom: 30px;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-footer .btn-primary {
+  font-family: "CircularStd-Medium";
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  max-width: 260px;
+  height: 65px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  background: #17a1ff;
+  border-radius: 0;
+  margin: auto;
+}
+
+#web-hosting .pricing-plan .price-plan-item .price-footer .btn-primary:hover {
+  background: #0087e3;
+}
+
+/*===// end of web_hosting section === */
 /*=== ? section start === */
 /*===// end of ? section === */
 /*=== footer section start === */
+.footer {
+  background: #041226;
+}
+
+.footer .footer-top {
+  padding: 60px 0;
+}
+
+.footer .footer-top .footer-logo img {
+  display: block;
+}
+
+.footer .footer-top p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 25px 0 5px 0;
+}
+
+.footer .footer-top .form-group .form-control {
+  background: transparent;
+  border: 1px solid #17a1ff;
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer .footer-top .form-group .btn {
+  color: #17a1ff;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  transition: all 0.2s linear;
+}
+
+.footer .footer-top .form-group .btn:hover {
+  right: -5px;
+}
+
+.footer .footer-top .form-group .btn.focus, .footer .footer-top .form-group .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.footer .footer-top h6 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #17a1ff;
+  text-transform: uppercase;
+}
+
+.footer .footer-top ul li {
+  padding-bottom: 5px;
+}
+
+.footer .footer-top ul li a {
+  font-family: "Muli-regular";
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.2s linear;
+}
+
+.footer .footer-top ul li a:hover {
+  color: #17a1ff;
+}
+
+.footer .footer-bottom {
+  background: #030e1d;
+  padding: 20px 0;
+}
+
+.footer .footer-bottom p {
+  font-family: "Muli-regular";
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer .footer-bottom .social-link a {
+  text-align: center;
+}
+
+.footer .footer-bottom .social-link a i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background: #374962;
+  font-size: 16px;
+  color: #030e1d;
+  margin: 0 5px;
+  transition: all 0.2s linear;
+}
+
+.footer .footer-bottom .social-link a i:hover {
+  background: #17a1ff;
+}
+
 /*===// end of footer section === */

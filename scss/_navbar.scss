@@ -8,9 +8,36 @@
     color: $primary-light;
   }
 }
+.navbar .btn-primary{
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-family: $CircularStd-Medium;
+  font-size: 16px;
+}
 @media (min-width: 1200px){
   .navbar-expand-xl .navbar-nav .nav-link {
       padding-right: .8rem;
       padding-left: .8rem;
+  }
+}
+@media (max-width: 1200px){
+  .navbar {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: $bg-light;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    transition: all 0.2s linear;
+  }
+}
+
+.container-top{
+  @media(min-width: 1600px){
+    max-width: 80%!important;
   }
 }

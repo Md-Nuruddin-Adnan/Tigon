@@ -1,0 +1,152 @@
+#web-hosting{
+  .sub-banner{
+    background: url(../images/web_hosting/banner.png) no-repeat top center/cover;
+    .container{
+       h5{
+         &::before{
+           width: 80px;
+         }
+       }
+    }
+  }
+
+  .features{
+    background: url(../images/triangle-bg/web-hosting.png) no-repeat center center/cover;
+    padding: 100px 0;
+    .section-heading-2{
+      h2{
+       @media(min-width: 1200px){
+         white-space: pre-line;
+       }
+      }
+    }
+  }
+
+  .pricing-plan{
+    background: url(../images/triangle-bg/price-plan.png) no-repeat center center/cover;
+    padding: 100px 0;
+
+    .nav-pills{
+      border-radius: 50px;
+      border: 1px solid $primary-light;
+      background: $color-white;
+      display: inline-flex;
+
+      .nav-link{
+        font-family: $CircularStd-Book;
+        font-size: 18px;
+        color: $primary-light;
+        border-radius: 50px;
+        width: 140px;
+        height: 55px;
+        padding: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-link.active, .show>.nav-link {
+        color: #fff;
+        background-color: $primary-light;
+      }
+    }
+    
+    .price-plan-item{
+      background: $bg-light;
+      padding: 50px 20px;
+      position: relative;
+      overflow: hidden;
+
+      &.recommended::before{
+        content: '';
+        position: absolute;
+        background: transparent;
+        top: 0;
+        left: 0;
+        width: 0px;
+        height: 0px;
+        border-top: 80px solid $primary-light;
+        border-right: 80px solid transparent;
+        z-index: 1;
+      }
+      &.recommended::after{
+        content: '';
+        position: absolute;
+        background: transparent;
+        bottom: 0;
+        right: 0;
+        width: 0px;
+        height: 0px;
+        border-bottom: 80px solid $primary-light;
+        border-left: 80px solid transparent;
+        z-index: 1;
+      }
+      .price-header{
+        h3.title{
+          font-family: $Ubuntu;
+          font-weight: 700;
+          color: $color-white;
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+        p{
+          font-family: $Muli-regular;
+          font-size: 18px;
+          color: $color-white;
+        }
+      }
+
+      .price-body{
+        border-bottom: 1px solid #1a3353;
+        padding: 25px 0;
+        li{
+          padding: 8px;
+          i{
+            color: $primary-light;
+            font-size: 16px;
+            padding: 5px 8px;
+          }
+          span{
+            font-family: $Ubuntu;
+            font-weight: 500;
+            font-size: 16px;
+            color: $color-white;
+          }
+        }
+      }
+
+      .price-footer{
+        .pricing-amount{
+          font-family: $CircularStd-Bold;
+          font-size: 50px;
+          color: $color-white;
+          padding: 30px 0 0 0;
+        }
+        span{
+          font-family: $CircularStd-Book;
+          font-size: 16px;
+          color: $color-white;
+          display: block;
+          padding-bottom: 30px;
+        }
+        .btn-primary{
+          font-family: $CircularStd-Medium;
+          font-size: 18px;
+          color: $color-white;
+          width: 100%;
+          max-width: 260px;
+          height: 65px;
+          padding: 0;
+          display: grid;
+          place-items: center;
+          background: $primary-light;
+          border-radius: 0;
+          margin: auto;
+
+          &:hover{
+            background: darken($primary-light, 10);
+          }
+        }
+      }
+    }
+  }
+}
