@@ -1113,6 +1113,20 @@ p {
   padding: 100px 0;
 }
 
+@media (min-width: 992px) {
+  #terms-of-service .main-content .sidebar-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #terms-of-service .main-content .sidebar-item .make-me-sticky {
+    position: sticky;
+    top: 0;
+  }
+}
+
 #terms-of-service .main-content .terms-nav {
   background: #081931;
   border-radius: 5px;

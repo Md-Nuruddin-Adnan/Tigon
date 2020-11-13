@@ -14,6 +14,24 @@
     background: url(../images/triangle-bg/terms-service-bg.png) no-repeat center/cover;
     padding: 100px 0;
 
+    // sticky sidebar start
+    @media(min-width: 992px){
+      .sidebar-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+  
+        .make-me-sticky {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 0;
+        }
+      }
+    }
+    // sticky sidebar end
+
     .terms-nav{
       background: $bg-dark;
       border-radius: 5px;
